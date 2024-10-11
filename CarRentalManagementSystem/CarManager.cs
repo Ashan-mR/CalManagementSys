@@ -30,8 +30,18 @@ namespace CarRentalManagementSystem
                 Console.WriteLine(car);
             }
         }
-        public void UpdateCars()
+        public void UpdateCars(int carId, string Carname, string Model, decimal RentPrice)
         {
+            var car =cars.Find(c => c.carId == carId);
+
+            if (car == null)
+            {
+                Console.WriteLine("Car Not found");
+                return;
+            }
+            cars.Remove(car);
+            CreateCar(Carname, Model, RentPrice);
+            Console.WriteLine("Car updated succesfully");
 
         }
         public void DeleteCars()
