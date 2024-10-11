@@ -23,5 +23,9 @@ namespace CarRentalManagementSystem
             RentPrice = rentPrice;
         }
 
+        public override string tostring()
+        {
+            return $"ID: {{CarId}}\n, Brand: {{Brand}}\n, Model: {{Model}}\n, RentalPrice: {{RentalPrice}}\n "
+        }
     }
 }
