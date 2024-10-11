@@ -12,13 +12,18 @@ namespace CarRentalManagementSystem
         private List<Car> cars=new List<Car>();
         private int carID = 1;
 
-        public void CreateCar()
+        public void CreateCar(string Carname,string Model,decimal RentPrice)
         {
-
+            var car = new Car(carID++, Carname, Model, RentPrice);
+            cars.Add(car);
+            Console.WriteLine("Car Added Successfully");
         }
         public void ReadCars()
         {
-
+            if (cars.Count == 0)
+            {
+                Console.WriteLine("No Cars Adeed")
+            }
         }
         public void UpdateCars()
         {
