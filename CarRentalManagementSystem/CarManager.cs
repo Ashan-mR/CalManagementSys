@@ -22,7 +22,12 @@ namespace CarRentalManagementSystem
         {
             if (cars.Count == 0)
             {
-                Console.WriteLine("No Cars Adeed")
+                Console.WriteLine("No Cars Adeed");
+            }
+            foreach (var car in cars)
+            {
+                Console.WriteLine("List of Cars");
+                Console.WriteLine(car);
             }
         }
         public void UpdateCars()
