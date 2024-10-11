@@ -44,9 +44,16 @@ namespace CarRentalManagementSystem
             Console.WriteLine("Car updated succesfully");
 
         }
-        public void DeleteCars()
+        public void DeleteCars(int carId)
         {
-
+            var car = cars.Find(c => c.carId == carId);
+            if(car == null)
+            {
+                Console.WriteLine("Car Not found");
+                return;
+            }
+            cars.Remove(car);
+            Console.WriteLine("Car deletedd succesfully");
         }
 
     }
